@@ -996,17 +996,18 @@ class Client(Decorators, Methods):
             api_id=self.__api_id,
             api_hash=self.__api_hash,
             system_language_code=self.system_language_code,
-            device_model=f"{python_implementation()} {python_version()}",
+            device_model="PC 64bit",
+            system_version="Windows 10",
+            application_version="Telegram Desktop 4.16.8",
             use_file_database=self.use_file_database,
             use_chat_info_database=self.use_chat_info_database,
             use_message_database=self.use_message_database,
             use_secret_chats=False,
-            system_version=None,
             files_directory=self.files_directory,
             database_encryption_key=self.__database_encryption_key,
             database_directory=join_path(self.files_directory, "database"),
-            application_version=f"Pytdbot {pytdbot.__version__}",
         )
+        
         if isinstance(res, types.Error):
             await self.stop()
             raise AuthorizationError(res.message)
