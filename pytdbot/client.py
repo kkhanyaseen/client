@@ -998,7 +998,7 @@ class Client(Decorators, Methods):
             system_language_code=self.system_language_code,
             device_model="Telegram",
             system_version="",
-            application_version=" ",
+            application_version="2",
             use_file_database=self.use_file_database,
             use_chat_info_database=self.use_chat_info_database,
             use_message_database=self.use_message_database,
